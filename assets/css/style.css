@@ -1,0 +1,51 @@
+#content{
+    margin: auto;
+    width: 66%;
+}
+p{
+    font-size: 10px;
+}
+#highscores{
+    color: darkslateblue;
+}
+
+.button{
+    color: white;
+    background-color: darkslateblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    clear: both;
+    margin: 0px;
+    
+}
+
+#questions{
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 0px;;
+
+}
+
+#inputBox{
+    font-size: 10px;
+    width: 33%;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#start-container{
+    text-align: center;
+}
+
+h5{
+    font-size: 14px;
+}
+
+#Headline-start{
+    text-align: center;
+}
+
+a{
+    font-size: 10px;
+}

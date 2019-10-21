@@ -1,16 +1,15 @@
-// $(document).ready(function () {
+$(document).ready(function () {
     var answer = "";
     var timeLeft = 75;
     var index = 0;
     var content = $("#content");
-    // InitializeQuestions();
     InitializeStartPage();
 
     function InitializeStartPage() {
         content.empty();
-        content.append($("<h5 id='Headline'>Coding Quiz Challenge</h5>"));
+        content.append($("<h5 id='Headline-start'>Coding Quiz Challenge</h5>"));
         content.append($("<p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>"));
-        content.append($("<button class='button' id='start'>Start Quiz</button>"));
+        content.append($("<div id='start-container'><button class='button' id='start'>Start Quiz</button></div>"));
     
         $("#start").click(function () {
             InitializeQuestions();
@@ -22,10 +21,10 @@
         content.append($("<h5 id='Headline'></h5>"));
         questionDiv = $("<div id='questions'></div>");
         content.append(questionDiv);
-        questionDiv.append($("<button class='button QBtn' id='A1'></button>"));
-        questionDiv.append($("<button class='button QBtn' id='A2'></button>"));
-        questionDiv.append($("<button class='button QBtn' id='A3'></button>"));
-        questionDiv.append($("<button class='button QBtn' id='A4'></button>"));
+        questionDiv.append($("<button class='button QBtn' id='A1'></button><br>"));
+        questionDiv.append($("<button class='button QBtn' id='A2'></button><br>"));
+        questionDiv.append($("<button class='button QBtn' id='A3'></button><br>"));
+        questionDiv.append($("<button class='button QBtn' id='A4'></button><br>"));
 
         content.append($("<p id='response'></p>"));
         loadQuestion();
@@ -71,21 +70,21 @@
         }
 
     }
-    
     function InitializeFinishScreen(){
         clearInterval(timer);
-        $('.timer').text("Time: " + timeLeft);
+        
         if (timeLeft < 0){
             timeLeft = 0;
         }
+        $('.timer').text("Time: " + timeLeft);
 
         content.empty();
         content.append($("<h5 id='Headline'>All done!</h5>"));
-        content.append($("<p>your final score is " + timeLeft + ".</p>"));
-        content.append($("<span>Enter initials:" +
-        "<input id='inputBox'></input>" +
+        content.append($("<p class='my-2'>your final score is " + timeLeft + ".</p>"));
+        content.append($("<p>Enter initials:" +
+        "<input id='inputBox' class='mx-2 my-0 p-0'></input>" +
         "<button class='button' id='submit'>Submit</button>" + 
-        "</span>"));
+        "</p>"));
     
         $("#submit").click(function () {
             alert("submitted");
@@ -94,4 +93,4 @@
 
     
 
-// });
+});
